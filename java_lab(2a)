@@ -1,0 +1,60 @@
+public class DataTypesAndWrapperClasses {
+
+    public static void main(String[] args) {
+        
+        int primitiveInt = 500;
+        char primitiveChar = 'A';
+        byte primitiveByte = 127;
+        short primitiveShort = 32000;
+        long primitiveLong = 100000L;
+        float primitiveFloat = 10.5f;
+        double primitiveDouble = 20.99;
+        boolean primitiveBoolean = true;
+        
+        Integer wrapperInteger = 1000;
+        Character wrapperCharacter = 'B';
+        Byte wrapperByte = 120;
+        Short wrapperShort = 15000;
+        Long wrapperLong = 5000000L;
+        Float wrapperFloat = 15.75f;
+        Double wrapperDouble = 35.75;
+        Boolean wrapperBoolean = false;
+        
+        System.out.println("Primitive Data Types:");
+        System.out.println("int: " + primitiveInt);
+        System.out.println("char: " + primitiveChar);
+        System.out.println("byte: " + primitiveByte);
+        System.out.println("short: " + primitiveShort);
+        System.out.println("long: " + primitiveLong);
+        System.out.println("float: " + primitiveFloat);
+        System.out.println("double: " + primitiveDouble);
+        System.out.println("boolean: " + primitiveBoolean);
+
+        System.out.println("\nWrapper Classes:");
+        System.out.println("Integer: " + wrapperInteger);
+        System.out.println("Character: " + wrapperCharacter);
+        System.out.println("Byte: " + wrapperByte);
+        System.out.println("Short: " + wrapperShort);
+        System.out.println("Long: " + wrapperLong);
+        System.out.println("Float: " + wrapperFloat);
+        System.out.println("Double: " + wrapperDouble);
+        System.out.println("Boolean: " + wrapperBoolean);
+
+        String numStr = "1234";
+        Integer parsedInt = Integer.parseInt(numStr); 
+        System.out.println("\nParsed Integer from String: " + parsedInt);
+        String boolStr = "true";
+        Boolean parsedBoolean = Boolean.valueOf(boolStr);
+        System.out.println("Parsed Boolean from String: " + parsedBoolean);
+
+        
+        int unboxedInt = wrapperInteger; 
+        double unboxedDouble = wrapperDouble; 
+        System.out.println("\nAuto-unboxed int: " + unboxedInt);
+        System.out.println("Auto-unboxed double: " + unboxedDouble);
+
+        
+        Integer autoBoxedInteger = 2000;  
+        System.out.println("Auto-boxed Integer: " + autoBoxedInteger);
+    }
+}
