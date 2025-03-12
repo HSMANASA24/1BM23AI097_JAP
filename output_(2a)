@@ -1,0 +1,26 @@
+Primitive Data Types:
+int: 500
+char: A
+byte: 127
+short: 32000
+long: 100000
+float: 10.5
+double: 20.99
+boolean: true
+
+Wrapper Classes:
+Integer: 1000
+Character: B
+Byte: 120
+Short: 15000
+Long: 5000000
+Float: 15.75
+Double: 35.75
+Boolean: false
+
+Parsed Integer from String: 1234
+Parsed Boolean from String: true
+
+Auto-unboxed int: 1000
+Auto-unboxed double: 35.75
+Auto-boxed Integer: 2000
