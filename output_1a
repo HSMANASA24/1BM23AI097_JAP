@@ -1,0 +1,15 @@
+Enter the member's name: Aadhya
+Enter the member's age: 20
+Enter the membership duration (in months): 4
+Is the member active? (true/false): true
+Enter the membership fee (monthly): 4000
+Enter the promotional fee (if any): 1000
+
+Member Details:
+Name: Aadhya
+Age: 20
+Duration: 4 months
+Active Member: Yes
+Membership Fee (Monthly): 4000
+Promotional Fee: 1000
+Total Fee: 15000
