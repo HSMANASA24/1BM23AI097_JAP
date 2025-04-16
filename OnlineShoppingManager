@@ -1,0 +1,75 @@
+import java.util.ArrayList;
+
+class Product {
+    String name;
+    double price;
+    String category;
+
+
+    public Product(String name, double price, String category) {
+        this.name = name;
+        this.price = price;
+        this.category = category;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Product Name: " + name + ", Price: $" + price + ", Category: " + category;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+}
+
+public class OnlineShoppingManager {
+    private ArrayList<Product> inventory;
+
+
+    public OnlineShoppingManager() {
+        inventory = new ArrayList<>();
+    }
+
+
+    public void addProduct(String name, double price, String category) {
+        Product product = new Product(name, price, category);
+        inventory.add(product);
+    }
+
+
+    public void removeProduct(String name) {
+
+        inventory.removeIf(product -> product.getName().equalsIgnoreCase(name));
+    }
+
+
+    public void displayProducts() {
+        if (inventory.isEmpty()) {
+            System.out.println("Inventory is empty.");
+        } else {
+            System.out.println("Inventory:");
+            for (Product product : inventory) {
+                System.out.println(product);
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+
+        OnlineShoppingManager manager = new OnlineShoppingManager();
+
+
+        manager.addProduct("Laptop", 999.99, "Electronics");
+        manager.addProduct("Phone", 699.99, "Electronics");
+        manager.addProduct("Shirt", 19.99, "Clothing");
+
+        manager.displayProducts();
+
+
+        manager.removeProduct("Phone");
+
+        manager.displayProducts();
+    }
+}
