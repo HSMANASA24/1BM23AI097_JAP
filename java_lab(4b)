@@ -1,0 +1,35 @@
+mport java.util.Scanner;
+
+public class ExamScoreTracker {
+    public static void main(String[] args) {
+        final int NUM_STUDENTS = 5; // The number of students
+        int[] examScores = new int[NUM_STUDENTS]; // Array to store the scores of students
+
+        // Input exam scores for each student
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter exam scores for each student:");
+
+        // Loop to take input for each student
+        for (int i = 0; i < NUM_STUDENTS; i++) {
+            System.out.print("Enter score for student " + (i + 1) + ": ");
+            examScores[i] = scanner.nextInt(); // Store the score for the current student
+        }
+
+        // Calculate sum of scores and the highest score
+        int sum = 0;
+        int highestScore = examScores[0]; // Assume the first score is the highest initially
+
+        // Loop to calculate sum and find the highest score
+        for (int score : examScores) {
+            sum += score; // Add the score to the sum
+            if (score > highestScore) { // If the current score is higher than the highest, update it
+                highestScore = score;
+            }
+        }
+
+        // Display statistics
+        System.out.println("\nExam score statistics:");
+        System.out.println("Sum of all scores: " + sum); // Output the sum of scores
+        System.out.println("Highest score attained: " + highestScore); // Output the highest score
+    }
+}
